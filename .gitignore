@@ -1,0 +1,20 @@
+# Mac OS
+.DS_Store
+
+# NPM
+/packages
+npm-*
+
+# Testing
+/.nyc_output
+/coverage
+
+# Build
+/build
+*.suo
+/bin
+/obj
+
+# generated translation files
+/translations
+/locale
