@@ -48,11 +48,12 @@
             // 
             // tbNumber
             // 
+            this.tbNumber.Enabled = false;
             this.tbNumber.Location = new System.Drawing.Point(134, 37);
             this.tbNumber.Name = "tbNumber";
             this.tbNumber.Size = new System.Drawing.Size(76, 25);
             this.tbNumber.TabIndex = 1;
-            this.tbNumber.Text = "2";
+            this.tbNumber.Text = "3";
             // 
             // label1
             // 

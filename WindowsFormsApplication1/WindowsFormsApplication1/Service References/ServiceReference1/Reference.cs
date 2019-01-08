@@ -29,6 +29,13 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReportStatus", ReplyAction="*")]
         System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.ReportStatusResponse> ReportStatusAsync(WindowsFormsApplication1.ServiceReference1.ReportStatusRequest request);
         
+        // CODEGEN: 命名空间 http://tempuri.org/ 的元素名称 RepairStatusResult 以后生成的消息协定未标记为 nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/RepairStatus", ReplyAction="*")]
+        WindowsFormsApplication1.ServiceReference1.RepairStatusResponse RepairStatus(WindowsFormsApplication1.ServiceReference1.RepairStatusRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/RepairStatus", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.RepairStatusResponse> RepairStatusAsync(WindowsFormsApplication1.ServiceReference1.RepairStatusRequest request);
+        
         // CODEGEN: 命名空间 http://tempuri.org/ 的元素名称 GetStatusResult 以后生成的消息协定未标记为 nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetStatus", ReplyAction="*")]
         WindowsFormsApplication1.ServiceReference1.GetStatusResponse GetStatus(WindowsFormsApplication1.ServiceReference1.GetStatusRequest request);
@@ -170,6 +177,74 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class RepairStatusRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="RepairStatus", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApplication1.ServiceReference1.RepairStatusRequestBody Body;
+        
+        public RepairStatusRequest() {
+        }
+        
+        public RepairStatusRequest(WindowsFormsApplication1.ServiceReference1.RepairStatusRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class RepairStatusRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int idx;
+        
+        public RepairStatusRequestBody() {
+        }
+        
+        public RepairStatusRequestBody(int idx) {
+            this.idx = idx;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class RepairStatusResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="RepairStatusResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApplication1.ServiceReference1.RepairStatusResponseBody Body;
+        
+        public RepairStatusResponse() {
+        }
+        
+        public RepairStatusResponse(WindowsFormsApplication1.ServiceReference1.RepairStatusResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class RepairStatusResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string RepairStatusResult;
+        
+        public RepairStatusResponseBody() {
+        }
+        
+        public RepairStatusResponseBody(string RepairStatusResult) {
+            this.RepairStatusResult = RepairStatusResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetStatusRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStatus", Namespace="http://tempuri.org/", Order=0)]
@@ -300,6 +375,31 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             inValue.Body = new WindowsFormsApplication1.ServiceReference1.ReportStatusRequestBody();
             inValue.Body.idx = idx;
             return ((WindowsFormsApplication1.ServiceReference1.WebService1Soap)(this)).ReportStatusAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.RepairStatusResponse WindowsFormsApplication1.ServiceReference1.WebService1Soap.RepairStatus(WindowsFormsApplication1.ServiceReference1.RepairStatusRequest request) {
+            return base.Channel.RepairStatus(request);
+        }
+        
+        public string RepairStatus(int idx) {
+            WindowsFormsApplication1.ServiceReference1.RepairStatusRequest inValue = new WindowsFormsApplication1.ServiceReference1.RepairStatusRequest();
+            inValue.Body = new WindowsFormsApplication1.ServiceReference1.RepairStatusRequestBody();
+            inValue.Body.idx = idx;
+            WindowsFormsApplication1.ServiceReference1.RepairStatusResponse retVal = ((WindowsFormsApplication1.ServiceReference1.WebService1Soap)(this)).RepairStatus(inValue);
+            return retVal.Body.RepairStatusResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.RepairStatusResponse> WindowsFormsApplication1.ServiceReference1.WebService1Soap.RepairStatusAsync(WindowsFormsApplication1.ServiceReference1.RepairStatusRequest request) {
+            return base.Channel.RepairStatusAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.RepairStatusResponse> RepairStatusAsync(int idx) {
+            WindowsFormsApplication1.ServiceReference1.RepairStatusRequest inValue = new WindowsFormsApplication1.ServiceReference1.RepairStatusRequest();
+            inValue.Body = new WindowsFormsApplication1.ServiceReference1.RepairStatusRequestBody();
+            inValue.Body.idx = idx;
+            return ((WindowsFormsApplication1.ServiceReference1.WebService1Soap)(this)).RepairStatusAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

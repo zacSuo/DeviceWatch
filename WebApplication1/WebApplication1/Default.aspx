@@ -16,11 +16,11 @@
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
 
     
-     <div id="a1" class="device-model device-ok"> A1</div>
-     <div id="a2" class="device-model device-ok"> A2</div>
-     <div id="a3" class="device-model device-ok"> A3</div>
-     <div id="a4" class="device-model device-ok"> A4</div>
-     <div id="a5" class="device-model device-ok"> A5</div>
+     <div id="a1" class="device-model device-ok"> <a href="tightvnc:">A1</a></div>
+     <div id="a2" class="device-model device-ok"> <a href="tightvnc:">A2</a></div>
+     <div id="a3" class="device-model device-ok"> <a href="tightvnc:">A3</a></div>
+     <div id="a4" class="device-model device-ok"> <a href="tightvnc:">A4</a></div>
+     <div id="a5" class="device-model device-ok"> <a href="tightvnc:">A5</a></div>
    
     <script>
         $(function () {

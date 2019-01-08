@@ -20,8 +20,8 @@ namespace WindowsFormsApplication1
         private void btnError_Click(object sender, EventArgs e)
         {
             int idx = int.Parse(tbNumber.Text.Trim());
-            //ServiceReference1.WebService1SoapClient service1 = new ServiceReference1.WebService1SoapClient();
-            ServiceReference2.WebService1SoapClient service1 = new ServiceReference2.WebService1SoapClient();
+            ServiceReference1.WebService1SoapClient service1 = new ServiceReference1.WebService1SoapClient();
+            //ServiceReference2.WebService1SoapClient service1 = new ServiceReference2.WebService1SoapClient();
             try
             {
                 string result = service1.ReportStatus(idx);
@@ -35,8 +35,8 @@ namespace WindowsFormsApplication1
         private void btnRepair_Click(object sender, EventArgs e)
         {
             int idx = int.Parse(tbNumber.Text.Trim());
-            //ServiceReference1.WebService1SoapClient service1 = new ServiceReference1.WebService1SoapClient();
-            ServiceReference2.WebService1SoapClient service1 = new ServiceReference2.WebService1SoapClient();
+            ServiceReference1.WebService1SoapClient service1 = new ServiceReference1.WebService1SoapClient();
+            //ServiceReference2.WebService1SoapClient service1 = new ServiceReference2.WebService1SoapClient();
             try
             {
                 string result = service1.RepairStatus(idx);
